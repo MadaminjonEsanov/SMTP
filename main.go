@@ -8,7 +8,7 @@ import (
 
 
 var (
-	fromGmail = "samisalih024@gmail.com"
+	fromGmail = "sami4@gmail.com"
 	password  = "asqh ugfs xrsy nxqh"
 )
 
@@ -23,10 +23,10 @@ func main() {
 			"jessicamengloa@gmail.com",
 		}
 
-			sendMAil(to, "Hello,World!")
+			sendMail(to, "Hello,World!")
 }
 
-func sendMAil(to []string ,sms string) {
+func sendMail(to []string ,sms string) {
 
 	smtHost := "smtp.gmail.com"
 	port := "587"
@@ -34,7 +34,7 @@ func sendMAil(to []string ,sms string) {
 
 	auth := smtp.PlainAuth("", fromGmail, password, smtHost)
 
-	err := smtp.sendMAil(smtHost+":"+port,auth,fromGmail,to,byteM)
+	err := smtp.sendMail(smtHost+":"+port,auth,fromGmail,to,byteM)
 		if err!= nil {
 			fmt.Println("Error sending email:", err)
 			return
